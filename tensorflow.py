@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
-
+#                                               -->  THIS FILE CODED ON COLAB  <--
+#                                              *************************************
 import numpy as np  # lineer algebra
 import tensorflow as tf # ai
 from tensorflow import keras # ai
@@ -76,8 +77,8 @@ model = keras.Sequential([
 
 """## Compile the model
 * Loss function : This measures how accurate the model is during training. You want to minimize this function to "steer" the model in the right direction.
-* Optimizer —This is how the model is updated based on the data it sees and its loss function.
-* Metrics —Used to monitor the training and testing steps. The following example uses accuracy, the fraction of the images that are correctly classified.
+* Optimizer : This is how the model is updated based on the data it sees and its loss function.
+* Metrics : Used to monitor the training and testing steps. The following example uses accuracy, the fraction of the images that are correctly classified.
 """
 
 model.compile(optimizer= 'adam', # default (0.1)
@@ -101,14 +102,6 @@ print('Test accuracy:',test_acc)
 
 """**Overfitting** is when a machine learning model performs worse on new, previously unseen inputs than on the training data.
 
-*******************************************************************
-Burada eğitim seti geçmiş 10 yılın soruları, model sınavın geçmiş senelere benzeyeceğini düşünmeniz, test seti hiç görmediğimiz istatistik sınavı, başarı kriteri aldığınız not. Sınav soruları beklendiğiniz gibi gelmez de kötü not alırsanız bu olaya overfitting denir.
-Overfitting probleminde model çalıştığımız veri seti üzerinde harika sonuçlar verir (training error düşük) fakat hiç görmediği yeni veri setleri üzerinde başarısız tahminler yapar. (test error yüksek) Yukarıda örneğini verdiğim gibi bütün soruları ezberlemek modelimizi çok kompleks hale getiriyor ve gürültü (noise) barındırıyor. Biz eğitim setindeki değişkenlerin arasındaki gerçek ilişkiyi modellemeye çalışıyoruz sadece o veri setine özgü gürültüyü değil.
-
-Underfitting (High Bias)
-Hoca bu konuyu sormaz şu konuyu sormaz diye diye kafanıza göre konuları çalışmaktan vazgeçip düşük not alırsanız buna da underfitting denir.
-Diğer bir deyişle eğer modelimizi eğitim (training) veri seti üzerinde çok basit olarak kurguladıysak hiç görmediğimiz test verisi üzerinde başarısız tahminler (sallama) yaparız ve gerçek değerle tahmin ettiğimiz değer arasındaki fark çok olur.![alt text](https://miro.medium.com/proxy/1*_7OPgojau8hkiPUiHoGK_w.png)
-**************************************************************
 
 #**Make predictions**
 With the model trained, you can use it to make predictions about some images.
@@ -166,24 +159,4 @@ plotImage(i, predictions[i], test_labels, test_images)
 plt.subplot(1,2,2)
 plotValueArray(i, predictions[i], test_labels)
 plt.show()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
