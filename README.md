@@ -1,2 +1,2 @@
-There are two of each file, but the extensions are different.
+Each file has two different versions, which are .py and .ipynb. They have the same content.
 I am coded these files on Colab.
